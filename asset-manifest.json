@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/garden-shop-it-hub/static/css/main.f9373fc7.css",
+    "main.js": "/garden-shop-it-hub/static/js/main.de17dc31.js",
+    "static/media/logo.svg": "/garden-shop-it-hub/static/media/logo.966f581f616e01963b81e70830dbac6f.svg",
+    "static/media/ic-whatsapp.svg": "/garden-shop-it-hub/static/media/ic-whatsapp.9c9ccc99c2d5ce020dedbde5acc5e6f4.svg",
+    "static/media/cart.svg": "/garden-shop-it-hub/static/media/cart.3f6efaddd49bc850851150ce0177c863.svg",
+    "static/media/ic-instagram.svg": "/garden-shop-it-hub/static/media/ic-instagram.964a062a5d1976e13a97cc2d279eba95.svg",
+    "index.html": "/garden-shop-it-hub/index.html",
+    "static/media/arrow_back.svg": "/garden-shop-it-hub/static/media/arrow_back.6b1c357bc81ff40d3f6c85c0a3d8b390.svg",
+    "static/media/arrow_down.svg": "/garden-shop-it-hub/static/media/arrow_down.ee79dc15314666eac7ce.svg",
+    "main.f9373fc7.css.map": "/garden-shop-it-hub/static/css/main.f9373fc7.css.map",
+    "main.de17dc31.js.map": "/garden-shop-it-hub/static/js/main.de17dc31.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f9373fc7.css",
+    "static/js/main.de17dc31.js"
+  ]
+}
