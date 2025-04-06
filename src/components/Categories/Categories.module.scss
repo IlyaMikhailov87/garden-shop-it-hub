@@ -1,0 +1,153 @@
+.categories {
+  padding-top: 110px;
+  padding-bottom: 80px;
+}
+
+.title_line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 40px;
+
+  button {
+    transform: translateY(5px);
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 850px;
+      height: 1px;
+      background-color: #dddddd;
+      right: 124px;
+      bottom: 50%;
+      cursor: auto;
+    }
+  }
+}
+
+.title {
+  font-size: 64px;
+  font-weight: 700;
+  width: 420px;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.category_list {
+  display: flex;
+  gap: 30px;
+}
+
+.category,
+.category li {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.category_image {
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+  height: 350px;
+  border-radius: 12px;
+}
+
+.category_name {
+  width: max-content;
+  padding: 6px 18px;
+  border-radius: 8px;
+  margin: 0 auto;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out;
+}
+
+.category {
+  position: relative;
+
+
+  &:hover {
+    .category_image {
+      box-shadow: 1px 1px 11px 5px #77777796;
+    }
+
+    .category_name {
+      background-color: #339933;
+      color: #fff;
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .categories {
+    padding-top: 80px;
+  }
+
+  .category_list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .category_name {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .category_list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .title {
+    font-size: 48px;
+    width: max-content;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .category_list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .categories {
+    padding: 40px 0;
+  }
+
+  .title {
+    font-size: 34px;
+  }
+
+  .title_line {
+    margin-bottom: 20px;
+
+    button {
+      display: none;
+    }
+  }
+
+  .category_list {
+    gap: 8px;
+  }
+
+  .category {
+    li {
+      gap: 4px;
+    }
+
+    .category_image {
+      height: 200px;
+    }
+  }
+
+  .category_name {
+    font-size: 14px;
+  }
+}

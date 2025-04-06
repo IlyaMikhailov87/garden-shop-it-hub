@@ -1,0 +1,156 @@
+.item {
+  max-width: 316px;
+  border-radius: 12px;
+  border: 1px solid hsl(0, 0%, 87%);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 6px 6px 12px 0px rgba(34, 60, 80, 0.2);
+  }
+
+  .discount {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    padding: 2px 8px;
+    background-color: #393;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    z-index: 1;
+  }
+
+  &:hover {
+    button {
+      opacity: 1;
+    }
+  }
+}
+
+.img {
+  width: 316px;
+  height: 316px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+
+  button {
+    opacity: 0;
+    width: 95%;
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.text_info {
+  padding: 20px 32px calc(32px + 20px + 39px);
+  max-width: 300px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.prices {
+  .new_price {
+    font-size: 40px;
+    font-weight: 600;
+    display: inline-block;
+    margin-right: 16px;
+  }
+
+  .old_price {
+    color: #8b8b8b;
+    font-size: 20px;
+    font-weight: 500;
+    display: inline-block;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      height: 1px;
+      background-color: #8b8b8b;
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .item {
+    max-width: 100%;
+  }
+
+  .img {
+    width: 100%;
+    height: 260px;
+  }
+
+  .text_info {
+    max-width: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .text_info {
+    padding: 20px 20px 85px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .img {
+    height: auto;
+
+    button {
+      display: none;
+    }
+  }
+
+  .text_info {
+    padding: 8px 12px 44px;
+  }
+
+  .prices {
+    .new_price {
+      font-size: 20px;
+      margin-right: 8px;
+    }
+    .old_price {
+      font-size: 14px;
+    }
+  }
+
+  .item {
+    .title {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .discount {
+      top: 6px;
+      right: 6px;
+      font-size: 14px;
+    }
+  }
+}

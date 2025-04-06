@@ -1,0 +1,103 @@
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 20px;
+  width: 200px;
+  position: relative;
+}
+
+.count {
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.btn {
+  display: block;
+  margin: 0;
+  width: 58px;
+  height: 58px;
+  font-size: 26px;
+  color: #8b8b8b;
+  border-radius: 6px;
+  padding: 17px;
+  text-align: center;
+  position: relative;
+
+  span {
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    background-color: #8b8b8b;
+    border-radius: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    transition: transform .1s ease-in-out;
+  }
+
+  &:first-child {
+    border-right: 1px solid #ddd;
+  }
+
+  &:last-child {
+    border-left: 1px solid #ddd;
+
+    span {
+      &:last-child {
+        transform: translateX(-50%) translateY(-50%) rotate(90deg);
+      }
+    }
+  }
+}
+
+.btn {
+  &:hover {
+    span {
+      background-color: #339933;
+    }
+  }
+  &:active {
+    span {
+     &:nth-child(1) {
+      transform: translateX(-50%) translateY(-50%) scale(1.1);
+     }
+     &:nth-child(2) {
+      transform: translateX(-50%) translateY(-50%) rotate(90deg) scale(1.1);
+     }
+    }
+  }
+}
+
+.change_color1 {
+  animation: changeColor1 1s 1;
+}
+
+.change_color2 {
+  animation: changeColor2 1s 1;
+}
+
+@keyframes changeColor1 {
+  from {
+    color: #339933;
+  }
+
+  to {
+    color: #282828;
+  }
+}
+
+@keyframes changeColor2 {
+  from {
+    color: #339933;
+  }
+
+  to {
+    color: #282828;
+  }
+}

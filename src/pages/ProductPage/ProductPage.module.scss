@@ -1,0 +1,131 @@
+.product {
+  padding: 115px 0 80px;
+  display: flex;
+  gap: 32px;
+}
+
+.productImage_wrapper {
+  max-width: 780px;
+
+  img {
+    width: 100%;
+    border-radius: 16px;
+    transition: box-shadow 0.2s ease-in-out;
+    box-shadow: 12px 12px 10px 0px rgba(34, 60, 80, 0.2);
+  }
+}
+
+.productInfo_wrapper {
+  max-width: 550px;
+
+  .product_title {
+    letter-spacing: 1.2px;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 32px;
+  }
+
+  .price_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 32px;
+
+    .new_price {
+      font-size: 64px;
+      font-weight: 700;
+    }
+
+    .old_price {
+      color: #8b8b8b;
+      font-size: 40px;
+      font-weight: 500;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 1px;
+        background-color: #8b8b8b;
+      }
+    }
+  }
+
+  .controls_wrapper {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 32px;
+
+    button {
+      max-width: 316px;
+    }
+  }
+
+  .description_title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  .description_text {
+    color: #282828;
+    font-weight: 400;
+    line-height: 130%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .product {
+    padding: 80px 0;
+  }
+
+  .productInfo_wrapper {
+    .product_title {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+    .price_wrapper {
+      gap: 12px;
+      margin-bottom: 28px;
+      .new_price {
+        font-size: 48px;
+      }
+      .old_price {
+        font-size: 28px;
+      }
+    }
+    .controls_wrapper {
+      gap: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .product {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .productInfo_wrapper {
+    .controls_wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      button {
+        font-size: 18px;
+      }
+
+      div {
+        width: 100%;
+      }
+    }
+    .description_text {
+      line-height: 140%;
+    }
+  }
+}

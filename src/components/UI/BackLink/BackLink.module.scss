@@ -1,0 +1,60 @@
+.link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  max-width: 150px;
+
+  svg {
+    width: 48px;
+    height: 48px;
+    fill: #8b8b8b;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  p {
+    color: #8b8b8b;
+    font-size: 28px;
+    font-weight: 600;
+  }
+
+  &:hover {
+    svg {
+      transform: translateX(-4px);
+    }
+  }
+}
+
+.productPage {
+  margin-bottom: -57px;
+  margin-top: 57px;
+}
+
+.productsPage {
+  margin-bottom: 20px;
+  margin-top: -55px;
+}
+
+@media screen and (max-width: 992px) {
+  .productPage {
+    margin-top: 22px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .link {
+    gap: 8px;
+    svg {
+      width: 38px;
+      height: 38px;
+    }
+
+    p {
+      font-size: 22px;
+    }
+  }
+
+  .productsPage {
+    margin-bottom: 6px;
+  }
+}

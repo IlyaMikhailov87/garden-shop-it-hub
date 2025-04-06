@@ -1,0 +1,134 @@
+.filter_items {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 40px;
+  row-gap: 20px;
+  align-items: center;
+  margin-bottom: 40px;
+
+  .filter_by_price {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  p,
+  label {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  input[type='number'] {
+    width: 112px;
+    height: 36px;
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+  }
+
+  input[type='checkbox'] {
+    &:checked,
+    &:not(:checked) {
+      position: absolute;
+      left: -9999px;
+    }
+
+    &:checked + label,
+    &:not(:checked) + label {
+      display: inline-block;
+      position: relative;
+      padding-left: 36px + 16px;
+      line-height: 20px;
+      cursor: pointer;
+    }
+
+    &:checked + label::before,
+    &:not(:checked) + label::before {
+      content: '';
+      position: absolute;
+      left: 0px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 34px;
+      height: 34px;
+      border: 1px solid #dddddd;
+      border-radius: 6px;
+      background-color: transparent;
+    }
+
+    &:checked + label::after,
+    &:not(:checked) + label::after {
+      content: '';
+      position: absolute;
+      left: 9px;
+      top: 3px;
+      width: 16px;
+      height: 7px;
+      border-left: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+      transform: rotate(-45deg);
+    }
+
+    &:not(:checked) + label:after {
+      opacity: 0;
+    }
+
+    &:checked + label:after {
+      opacity: 1;
+    }
+
+    &:checked + label::before {
+      border-color: #393;
+      background-color: #393;
+    }
+  }
+}
+
+.select_wrap {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+
+  select {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    appearance: none;
+    font-size: 16px;
+    width: 200px;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+
+  .arrow_down {
+    content: '';
+    position: absolute;
+    background: url('../../icons/arrow_down.svg') no-repeat center center /
+      cover;
+    width: 20px;
+    height: 20px;
+    right: 8px;
+    top: 8px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .filter_items {
+    margin-bottom: 30px;
+
+    label {
+      font-size: 16px;
+    }
+
+    .filter_by_price {
+      gap: 8px;
+
+      p {
+        font-size: 16px;
+      }
+    }
+    .select_wrap {
+      gap: 8px
+    }
+  }
+}
